@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawable="clr-namespace:BBCtrl8"
+             x:Class="BBCtrl8.MainPage">
+
+    <ContentPage.Resources>
+        <drawable:JoystickDrawable x:Key="drawJoystick" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout
+        Spacing="25"
+        Padding="30,0"
+        VerticalOptions="Start">
+
+        <GraphicsView 
+            x:Name="grView"
+            Drawable="{StaticResource drawJoystick}"
+            HeightRequest="300"
+            WidthRequest="400" 
+            />
+
+        <Label
+            x:Name="lblPos"
+            Text="Position1 x, y"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="Default"
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="lblPos2"
+            Text="Position2 x, y"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="Default"
+            HorizontalOptions="Center" />
+
+        <Label
+            x:Name="lblPos3"
+            Text="Position3 x, y"
+            SemanticProperties.HeadingLevel="Level2"
+            FontSize="Default"
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="CounterBtn"
+            Text="Clear"
+            SemanticProperties.Hint="clear pos"
+            Clicked="OnCounterClicked"
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="SendBtn"
+            Text="SEND"
+            SemanticProperties.Hint="clear pos"
+            Clicked="OnSendClicked"
+            HorizontalOptions="Center" />        
+        
+    </VerticalStackLayout>
+
+</ContentPage>
